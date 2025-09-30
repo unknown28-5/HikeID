@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Interactive map of mountains in Manado, Tomohon, and Minahasa, North Sulawesi.">
+  <title>Mountain Map - HikeID</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="nav-content">
+        <a href="beranda.html" class="logo">
+          <span class="material-symbols-outlined">landscape</span>
+          <span>HikeID</span>
+        </a>
+        
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+        
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="beranda.html">Home</a></li>
+          <li><a href="index.html" class="active">Mountains</a></li>
+          <li><a href="tips.html">Features</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+              <span class="material-symbols-outlined">dark_mode</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Map Container -->
+  <div id="map"></div>
+
+  <script src="script.js"></script>
+  <script>
+    // Dark Mode Toggle for Map Page
+    const themeToggle = document.getElementById('themeToggle');
+    const body = document.body;
+    const themeIcon = themeToggle.querySelector('.material-symbols-outlined');
+    
+    // Check for saved theme preference
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    if (currentTheme === 'dark') {
+      body.classList.add('dark');
+      themeIcon.textContent = 'light_mode';
+    }
+    
+    themeToggle.addEventListener('click', () => {
+      body.classList.toggle('dark');
+      
+      if (body.classList.contains('dark')) {
+        themeIcon.textContent = 'light_mode';
+        localStorage.setItem('theme', 'dark');
+      } else {
+        themeIcon.textContent = 'dark_mode';
+        localStorage.setItem('theme', 'light');
+      }
+    });
+
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const navMenu = document.getElementById('navMenu');
+    
+    mobileMenuBtn.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+      const icon = mobileMenuBtn.querySelector('.material-symbols-outlined');
+      icon.textContent = navMenu.classList.contains('active') ? 'close' : 'menu';
+    });
+  </script>
+</body>
+</html>
