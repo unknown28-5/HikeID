@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sumber utama Anda untuk menemukan dan merencanakan pendakian di pegunungan Indah Sulawesi Utara.">
+  <title>HikeID - North Sulawesi Mountain Guide</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="/img/logo.png" type="img/x-icon">
+  
+  <style>
+    /* Additional styles for hidden mountains */
+    .hidden-mountains {
+      display: none;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+    
+    .hidden-mountains.show {
+      display: contents;
+    }
+    
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="nav-content">
+        <a href="index.html" class="logo">
+          <span class="material-symbols-outlined">landscape</span>
+          <span>HikeID</span>
+        </a>
+        
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+          <span class="material-symbols-outlined">menu</span>
+        </button>
+        
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="map.html">Mountains</a></li>
+          <li><a href="tips.html">Features</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+              <span class="material-symbols-outlined">dark_mode</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <span class="material-symbols-outlined hero-icon">landscape</span>
+      <h1 class="hero-title">HikeID</h1>
+      <p class="hero-description">
+        Sumber utama Anda untuk menemukan dan merencanakan pendakian di pegunungan Indah Manado, Tomohon, dan Minahasa.
+      </p>
+      <div class="hero-actions">
+        <a href="map.html" class="btn btn-primary">
+          <span class="material-symbols-outlined">explore</span>
+          Explore Mountains
+        </a>
+        <a href="tips.html" class="btn btn-secondary">
+          <span class="material-symbols-outlined">school</span>
+          Climbing Tips
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Mountains -->
+  <section class="section" id="mountains">
+    <div class="container">
+      <h2 class="section-title">Featured Mountains</h2>
+      <p class="section-subtitle">Discover the most popular climbing destinations in North Sulawesi</p>
+      
+      <div class="grid" id="mountainsGrid">
+        <!-- Mountain Card 1 -->
+        <div class="card">
+          <div class="card-image">
+            <img src="img/Gunung Klabat.jpg" alt="Mountain Klabat">
+            <span class="badge">1,995m</span>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Gunung Klabat</h3>
+            <p class="card-location">
+              <span class="material-symbols-outlined">location_on</span>
+              Airmadidi, Minahasa Utara
+            </p>
+            <p class="card-description">Gunung Klabat adalah Gunung tertinggi di provinsi Sulawesi Utara yang memiliki ketinggian 1.995-2.100 mdpl memiliki danau kawah kecil dengan air yang sangat jernih, dan panorama dari puncak yang sangat indah dan menawan, untuk mendaki butuh pengalaman sehingga tidak cocok untuk pemula.</p>
+            <div class="card-meta">
+              <span class="difficulty difficulty-moderate">Moderate</span>
+              <span class="duration">4-8 hours</span>
+            </div>
+            <a href="map.html" class="btn btn-outline">View Details</a>
+          </div>
+        </div>
+
+        <!-- Mountain Card 2 -->
+        <div class="card">
+          <div class="card-image">
+            <img src="img/Gunung Mahawu.jpg" alt="Mount Mahawu">
+            <span class="badge">1,331m</span>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Gunung Mahawu</h3>
+            <p class="card-location">
+              <span class="material-symbols-outlined">location_on</span>
+              Tomohon, Sulawesi Utara
+            </p>
+            <p class="card-description">Gunung Mahawu adalah gunung berapi Stratovolco yang diapit Gunung Lokon dan Gunung Empung dan memiliki ketinggian sekitar 1.311 - 1342 mdpl Gunung ini cukup populer karena kawahnya berbentuk danau kehijauan dengan aktivitas geiser dan fumarol di bibir kawah ada jalan setapak yang memungkinkan pengunjung dapat mengelilingi kawah untuk jalur pendakiannya cukup relatif mudah sehingga ramah bagi pemula untuk mendakinya.</p>
+            <div class="card-meta">
+              <span class="difficulty difficulty-easy">Easy</span>
+              <span class="duration">50 minutes-1 hours</span>
+            </div>
+            <a href="map.html" class="btn btn-outline">View Details</a>
+          </div>
+        </div>
+
+        <!-- Mountain Card 3 -->
+        <div class="card">
+          <div class="card-image">
+            <img src="img/Gunung Lokon.jpg" alt="Mount Lokon">
+            <span class="badge">1,580m</span>
+          </div>
+          <div class="card-content">
+            <h3 class="card-title">Gunung Lokon</h3>
+            <p class="card-location">
+              <span class="material-symbols-outlined">location_on</span>
+              Tomohon, Sulawesi Utara
+            </p>
+            <p class="card-description">Gunung Lokon adalah Gunung berapi aktif yang menjadi salah satu gunung yang plaing mendominasi lanskap kota bunga, Gunung Lokon memiliki ketinggian sekitar 1.580 mdpl meski aktivitasnya berbahaya, pemandangan dari puncaknya tetap memukau, Pemandangan Kawah Aktif dengan asap belerang menjadi salah satu daya tarik utamanya, Gunung Lokon tidak cocok untuk pemula meskipun rute pendakiannya tidak terlalu sulit tapi karena statusnya sebagai gunung berapi yang sangat aktif dapat memicu kemungkinan resiko</p>
+            <div class="card-meta">
+              <span class="difficulty difficulty-moderate">Moderate</span>
+              <span class="duration">1-2 hours</span>
+            </div>
+            <a href="map.html" class="btn btn-outline">View Details</a>
+          </div>
+        </div>
+
+        <!-- Hidden Mountains (will be shown on button click) -->
+        <div class="hidden-mountains" id="hiddenMountains">
+          <!-- Mountain Card 4 -->
+          <div class="card">
+            <div class="card-image">
+              <img src="img/Gunung Soputan.jpg" alt="Mount Soputan">
+              <span class="badge">1,784m</span>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">Gunung Soputan</h3>
+              <p class="card-location">
+                <span class="material-symbols-outlined">location_on</span>
+                Kabupaten Minahasa Selatan dan Tenggara, Sulawesi Utara
+              </p>
+              <p class="card-description">Gunung Soputan adalah Gunung berapi bertipe strato yang aktif, secara geografis gunung ini memiliki ketinggian 1.784-1.785 mdpl, Gunung ini menawarkan pemandangan padang pasir dan hutan pinus, serta beberapa objek wisata menarik lainnya seperti kawah tua dana air terjun, Gunung Soputan tidak cocok untuk pemula karena jalur pendakian cukup menantang dan statusnya masih aktif memerlukan kewaspadaan yang tinggi</p>
+              <div class="card-meta">
+                <span class="difficulty difficulty-hard">Hard</span>
+                <span class="duration">5-7 hours</span>
+              </div>
+              <a href="map.html" class="btn btn-outline">View Details</a>
+            </div>
+          </div>
+
+          <!-- Mountain Card 5 -->
+          <div class="card">
+            <div class="card-image">
+              <img src="img/Gunung empung.jpeg" alt="Mount Empung">
+              <span class="badge">1,340m</span>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">Gunung Empung</h3>
+              <p class="card-location">
+                <span class="material-symbols-outlined">location_on</span>
+                Tomohon, Sulawesi Utara
+              </p>
+              <p class="card-description">Gunung Empung adalah Gunung berapi aktif yang  sering disebut sebagai 'kembaran' dari Gunung Lokon karena letaknya berdekatan hanya 2,2Km saja, Gunung Empung memiliki ketinggian 1.340 mdpl, meskipun dalam status aktif gunung Empung termasuk ramah untuk pemula karena jalur pendakiannya cukup mudah dikarenakan medan dan waktu yang dibutuhkan untuk mendakinya tidak terlalu lama</p>
+              <div class="card-meta">
+                <span class="difficulty difficulty-easy">Easy</span>
+                <span class="duration">1.5-2 hours</span>
+              </div>
+              <a href="map.html" class="btn btn-outline">View Details</a>
+            </div>
+          </div>
+
+          <!-- Mountain Card 6 -->
+          <div class="card">
+            <div class="card-image">
+              <img src="img/Gunung Tampusu.jpeg" alt="Mount Tampusu">
+              <span class="badge">1,474m</span>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">Gunung Tampusu</h3>
+              <p class="card-location">
+                <span class="material-symbols-outlined">location_on</span>
+                Kabupaten Minahasa, Sulawesi Utara
+              </p>
+              <p class="card-description">Gunung Tampusu adalah gunung berapi yang bertipe C yang tidak memiliki catatan sejarah letusan sehingga dijadikan desitinasi yang aman untuk di daki oleh pendaki dari berbagai pengalaman, ketinggian gunung Tampusu sekitar 1.474 mdpl, Daya tarik utama gunung ini adalah sebuah danau yang terletak di puncaknya, pemandangan di atas puncaknya yang istimewa sehingga pendaki dapat menikmati spektakuler Danau Tondano yang di kelilingi perbukitan.</p>
+              <div class="card-meta">
+                <span class="difficulty difficulty-easy">Easy</span>
+                <span class="duration">30-45 minutes</span>
+              </div>
+              <a href="map.html" class="btn btn-outline">View Details</a>
+            </div>
+          </div>
+
+          <!-- Mountain Card 7 -->
+          <div class="card">
+            <div class="card-image">
+              <img src="img/Gunung Tumpa.jpg" alt="Mount Tumpa">
+              <span class="badge">750m</span>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">Gunung Tumpa</h3>
+              <p class="card-location">
+                <span class="material-symbols-outlined">location_on</span>
+                Kecamatan Bunaken, Kota Manado
+              </p>
+              <p class="card-description">Gunung Tumpa adalah destinasi wisata alam yang terletak di kelurahan Tongkaina, Kec Bunaken, Kota Manado, SULUT yang dikenal sebagai Taman Hutan Raya(Tahura) yang memiliki ketinggian 600-750 mdpl cocok untuk pendaki pemula.</p>
+              <div class="card-meta">
+                <span class="difficulty difficulty-easy">Easy</span>
+                <span class="duration">50 minutes-1 hours</span>
+              </div>
+              <a href="map.html" class="btn btn-outline">View Details</a>
+            </div>
+          </div>
+
+          <!-- Mountain Card 8 -->
+          <div class="card">
+            <div class="card-image">
+              <img src="img/Gunung Manado Tua.jpg" alt="Mount Manado Tua">
+              <span class="badge">655m</span>
+            </div>
+            <div class="card-content">
+              <h3 class="card-title">Gunung Manado Tua</h3>
+              <p class="card-location">
+                <span class="material-symbols-outlined">location_on</span>
+                Manado Tua, Sulawesi Utara
+              </p>
+              <p class="card-description">Gunung Manado Tua adalah Gunung vulkanik tidak aktif setinggi 655 mdpl di tengah pulau Manado Tua, bagian dari Taman Nasional Bunaken, cocok untuk pendaki pemula.</p>
+              <div class="card-meta">
+                <span class="difficulty difficulty-easy">Easy</span>
+                <span class="duration">1.5-2 hours</span>
+              </div>
+              <a href="map.html" class="btn btn-outline">View Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-8">
+        <button id="viewAllBtn" class="btn btn-primary">View All Mountains</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="section">
+    <div class="container">
+      <div class="cta-box">
+        <h2 class="cta-title">Ready to Start Your Adventure?</h2>
+        <p class="cta-description">Bergabunglah dengan komunitas pendaki kami dan temukan keindahan puncak-puncak di Sulawesi Utara.</p>
+        <a href="map.html" class="btn btn-primary btn-lg">Explore Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h4 class="footer-title">HikeID</h4>
+          <p class="footer-text">Teman terpercaya Anda untuk petualangan di Pegunungan Sulawesi Utara.</p>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><span class="material-symbols-outlined">facebook</span></a>
+            <a href="#" aria-label="Instagram"><span class="material-symbols-outlined">photo_camera</span></a>
+            <a href="#" aria-label="Twitter"><span class="material-symbols-outlined">share</span></a>
+          </div>
+        </div>
+        
+        <div class="footer-section">
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="map.html">Mountains</a></li>
+            <li><a href="tips.html">Features</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#">About Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4 class="footer-title">Resources</h4>
+          <ul class="footer-links">
+            <li><a href="tips.html">Panduan Keselamatan</a></li>
+            <li><a href="https://www.bmkg.go.id/cuaca/prakiraan-cuaca/71.73">Cuaca</a></li>
+            <li><a href="https://api.whatsapp.com/send/?phone=6289697885901&text&type=phone_number&app_absent=0">Kontak Darurat</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-section">
+          <h4 class="footer-title">Contact</h4>
+          <ul class="footer-contact">
+            <li>
+              <span class="material-symbols-outlined">email</span>
+              info@northsulawesiclimbers.com
+            </li>
+            <li>
+              <span class="material-symbols-outlined">phone</span>
+              +62 xxx xxxx xxxx
+            </li>
+            <li>
+              <span class="material-symbols-outlined">location_on</span>
+              Manado, North Sulawesi
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 North Sulawesi Climber's Guide. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Dark Mode Toggle
+    const themeToggle = document.getElementById('themeToggle');
+    const body = document.body;
+    const themeIcon = themeToggle.querySelector('.material-symbols-outlined');
+    
+    // Check for saved theme preference
+    const currentTheme = window.localStorage.getItem('theme') || 'light';
+    if (currentTheme === 'dark') {
+      body.classList.add('dark');
+      themeIcon.textContent = 'light_mode';
+    }
+    
+    themeToggle.addEventListener('click', () => {
+      body.classList.toggle('dark');
+      
+      if (body.classList.contains('dark')) {
+        themeIcon.textContent = 'light_mode';
+        window.localStorage.setItem('theme', 'dark');
+      } else {
+        themeIcon.textContent = 'dark_mode';
+        window.localStorage.setItem('theme', 'light');
+      }
+    });
+
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const navMenu = document.getElementById('navMenu');
+    
+    mobileMenuBtn.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+      const icon = mobileMenuBtn.querySelector('.material-symbols-outlined');
+      icon.textContent = navMenu.classList.contains('active') ? 'close' : 'menu';
+    });
+
+    // View All Mountains Toggle
+    const viewAllBtn = document.getElementById('viewAllBtn');
+    const hiddenMountains = document.getElementById('hiddenMountains');
+    let isExpanded = false;
+
+    viewAllBtn.addEventListener('click', () => {
+      isExpanded = !isExpanded;
+      
+      if (isExpanded) {
+        hiddenMountains.classList.add('show');
+        viewAllBtn.textContent = 'Show Less';
+        
+        // Smooth scroll to show new mountains
+        setTimeout(() => {
+          hiddenMountains.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }, 100);
+      } else {
+        hiddenMountains.classList.remove('show');
+        viewAllBtn.textContent = 'View All Mountains';
+        
+        // Scroll back to top of mountains section
+        document.getElementById('mountains').scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+
+    // Smooth Scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const href = this.getAttribute('href');
+        if (href !== '#') {
+          e.preventDefault();
+          const target = document.querySelector(href);
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+            // Close mobile menu if open
+            navMenu.classList.remove('active');
+            mobileMenuBtn.querySelector('.material-symbols-outlined').textContent = 'menu';
+          }
+        }
+      });
+    });
+
+    // Add scroll effect to navbar
+    let lastScroll = 0;
+    const navbar = document.querySelector('.navbar');
+    
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.pageYOffset;
+      
+      if (currentScroll > 100) {
+        navbar.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1)';
+      } else {
+        navbar.style.boxShadow = 'none';
+      }
+      
+      lastScroll = currentScroll;
+    });
+  </script>
+</body>
+</html>
