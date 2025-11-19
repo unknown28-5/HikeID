@@ -5,12 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Essential climbing tips for hiking mountains in Manado, Tomohon, and Minahasa, North Sulawesi.">
   <title>Climbing Tips - HikeID</title>
-  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
-  
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="/img/logo.png" type="img/x-icon">
 </head>
@@ -31,9 +29,8 @@
         
         <ul class="nav-menu" id="navMenu">
           <li><a href="index.html">Home</a></li>
-          <li><a href="map.html">Mountains</a></li>
-          <li><a href="tips.html" class="active">Features</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="map.html">Map</a></li>
+          <li><a href="tips.html" class="active">Panduan</a></li>
           <li>
             <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
               <span class="material-symbols-outlined">dark_mode</span>
@@ -47,7 +44,7 @@
   <!-- Tips Section -->
   <section class="section" id="tips">
     <div class="container">
-      <h2 class="section-title">Tips Pendakian</h2>
+      <h2 class="section-title">Panduan</h2>
       <p class="section-subtitle">Persiapkan diri Anda dengan baik untuk pengalaman mendaki yang aman dan menyenangkan.</p>
       
       <div class="grid">
@@ -65,7 +62,6 @@
           </div>
         </div>
 
-        <!-- Tip Card 2 -->
         <div class="card">
           <div class="card-image">
             <img src="img/perlengkapan.jpg" alt="Peralatan Mendaki">
@@ -130,7 +126,7 @@
   <section class="section">
     <div class="container">
       <div class="cta-box">
-        <h2 class="cta-title">Ready to Start Your Adventure?</h2>
+        <h2 class="cta-title">Siap Menjelajah Gunung?</h2>
         <p class="cta-description">Jelajahi gunung-gunung terbaik di Sulawesi Utara dengan persiapan yang matang.</p>
         <a href="map.html" class="btn btn-primary btn-lg">Explore Now</a>
       </div>
@@ -155,18 +151,7 @@
           <h4 class="footer-title">Quick Links</h4>
           <ul class="footer-links">
             <li><a href="map.html">Mountains</a></li>
-            <li><a href="tips.html">Features</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#">About Us</a></li>
-          </ul>
-        </div>
-        
-        <div class="footer-section">
-          <h4 class="footer-title">Resources</h4>
-          <ul class="footer-links">
             <li><a href="tips.html">Panduan Keselamatan</a></li>
-            <li><a href="https://www.bmkg.go.id/cuaca/prakiraan-cuaca/71.73">Cuaca</a></li>
-            <li><a href="https://api.whatsapp.com/send/?phone=6289697885901&text&type=phone_number&app_absent=0">Kontak Darurat</a></li>
           </ul>
         </div>
         
@@ -194,77 +179,6 @@
       </div>
     </div>
   </footer>
-
-  <script>
-    // Dark Mode Toggle
-    const themeToggle = document.getElementById('themeToggle');
-    const body = document.body;
-    const themeIcon = themeToggle.querySelector('.material-symbols-outlined');
-    
-    // Check for saved theme preference
-    const currentTheme = localStorage.getItem('theme') || 'light';
-    if (currentTheme === 'dark') {
-      body.classList.add('dark');
-      themeIcon.textContent = 'light_mode';
-    }
-    
-    themeToggle.addEventListener('click', () => {
-      body.classList.toggle('dark');
-      
-      if (body.classList.contains('dark')) {
-        themeIcon.textContent = 'light_mode';
-        localStorage.setItem('theme', 'dark');
-      } else {
-        themeIcon.textContent = 'dark_mode';
-        localStorage.setItem('theme', 'light');
-      }
-    });
-
-    // Mobile Menu Toggle
-    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-    const navMenu = document.getElementById('navMenu');
-    
-    mobileMenuBtn.addEventListener('click', () => {
-      navMenu.classList.toggle('active');
-      const icon = mobileMenuBtn.querySelector('.material-symbols-outlined');
-      icon.textContent = navMenu.classList.contains('active') ? 'close' : 'menu';
-    });
-
-    // Smooth Scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        const href = this.getAttribute('href');
-        if (href !== '#') {
-          e.preventDefault();
-          const target = document.querySelector(href);
-          if (target) {
-            target.scrollIntoView({
-              behavior: 'smooth',
-              block: 'start'
-            });
-            // Close mobile menu if open
-            navMenu.classList.remove('active');
-            mobileMenuBtn.querySelector('.material-symbols-outlined').textContent = 'menu';
-          }
-        }
-      });
-    });
-
-    // Add scroll effect to navbar
-    let lastScroll = 0;
-    const navbar = document.querySelector('.navbar');
-    
-    window.addEventListener('scroll', () => {
-      const currentScroll = window.pageYOffset;
-      
-      if (currentScroll > 100) {
-        navbar.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1)';
-      } else {
-        navbar.style.boxShadow = 'none';
-      }
-      
-      lastScroll = currentScroll;
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>

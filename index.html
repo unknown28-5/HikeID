@@ -10,33 +10,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
-
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="/img/favicon.ico" type="img/x-icon">
   <link rel="shortcut icon" href="logo.png" type="img/x-icon">
-  
-  <style>
-    /* Additional styles for hidden mountains */
-    .hidden-mountains {
-      display: none;
-      animation: fadeIn 0.5s ease-in-out;
-    }
-    
-    .hidden-mountains.show {
-      display: contents;
-    }
-    
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-  </style>
 </head>
 <body>
   
@@ -45,7 +21,7 @@
     <div class="container">
       <div class="nav-content">
         <a href="index.html" class="logo">
-          <span class="material-symbols-outlined">landscape</span>
+          <span class="material-symbols-outlined"></span>
           <span>HikeID</span>
         </a>
         
@@ -55,9 +31,8 @@
         
         <ul class="nav-menu" id="navMenu">
           <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="map.html">Mountains</a></li>
-          <li><a href="tips.html">Features</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="map.html">Map</a></li>
+          <li><a href="tips.html">Panduan</a></li>
           <li>
             <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
               <span class="material-symbols-outlined">dark_mode</span>
@@ -77,13 +52,13 @@
         Sumber utama Anda untuk menemukan dan merencanakan pendakian di pegunungan Indah Manado, Tomohon, dan Minahasa.
       </p>
       <div class="hero-actions">
-        <a href="map.html" class="btn btn-primary">
+        <a href="#mountains" class="btn btn-primary">
           <span class="material-symbols-outlined">explore</span>
-          Explore Mountains
+          Explore
         </a>
         <a href="tips.html" class="btn btn-secondary">
           <span class="material-symbols-outlined">school</span>
-          Climbing Tips
+          Panduan Keselamatan
         </a>
       </div>
     </div>
@@ -92,8 +67,8 @@
   <!-- Featured Mountains -->
   <section class="section" id="mountains">
     <div class="container">
-      <h2 class="section-title">Gunung Pilihan</h2>
-      <p class="section-subtitle">Temukan destinasi pendakian paling populer di Sulawesi Utara</p>
+      <h2 class="section-title">Explore</h2>
+      <p class="section-subtitle">Temukan destinasi pendakian terpopuler di Sulawesi Utara</p>
       
       <div class="grid" id="mountainsGrid">
         <!-- Mountain Card 1 -->
@@ -113,7 +88,7 @@
               <span class="difficulty difficulty-moderate">Moderate</span>
               <span class="duration">4-8 hours</span>
             </div>
-            <a href="map.html" class="btn btn-outline">View Details</a>
+           <a href="map.html?gunung=Gunung Klabat" class="btn btn-outline">View Details</a>
           </div>
         </div>
 
@@ -134,7 +109,7 @@
               <span class="difficulty difficulty-easy">Easy</span>
               <span class="duration">50 minutes-1 hours</span>
             </div>
-            <a href="map.html" class="btn btn-outline">View Details</a>
+           <a href="map.html?gunung=Gunung Mahawu" class="btn btn-outline">View Details</a>
           </div>
         </div>
 
@@ -155,7 +130,7 @@
               <span class="difficulty difficulty-moderate">Moderate</span>
               <span class="duration">1-2 hours</span>
             </div>
-            <a href="map.html" class="btn btn-outline">View Details</a>
+            <a href="map.html?gunung=Gunung Lokon" class="btn btn-outline">View Details</a>
           </div>
         </div>
 
@@ -178,14 +153,14 @@
                 <span class="difficulty difficulty-hard">Hard</span>
                 <span class="duration">5-7 hours</span>
               </div>
-              <a href="map.html" class="btn btn-outline">View Details</a>
+              <a href="map.html?gunung=Gunung Soputan" class="btn btn-outline">View Details</a>
             </div>
           </div>
 
           <!-- Mountain Card 5 -->
           <div class="card">
             <div class="card-image">
-              <img src="img/Gunung Empung.jpeg" alt="Mount Empung">
+              <img src="img/Gunung empung.jpeg" alt="Mount Empung">
               <span class="badge">1,340m</span>
             </div>
             <div class="card-content">
@@ -199,7 +174,7 @@
                 <span class="difficulty difficulty-easy">Easy</span>
                 <span class="duration">1.5-2 hours</span>
               </div>
-              <a href="map.html" class="btn btn-outline">View Details</a>
+              <a href="map.html?gunung=Gunung Empung" class="btn btn-outline">View Details</a>
             </div>
           </div>
 
@@ -220,7 +195,7 @@
                 <span class="difficulty difficulty-easy">Easy</span>
                 <span class="duration">30-45 minutes</span>
               </div>
-              <a href="map.html" class="btn btn-outline">View Details</a>
+              <a href="map.html?gunung=Gunung Tampusu" class="btn btn-outline">View Details</a>
             </div>
           </div>
 
@@ -241,7 +216,7 @@
                 <span class="difficulty difficulty-easy">Easy</span>
                 <span class="duration">50 minutes-1 hours</span>
               </div>
-              <a href="map.html" class="btn btn-outline">View Details</a>
+              <a href="map.html?gunung=Gunung Tumpa" class="btn btn-outline">View Details</a>
             </div>
           </div>
 
@@ -262,7 +237,7 @@
                 <span class="difficulty difficulty-easy">Easy</span>
                 <span class="duration">1.5-2 hours</span>
               </div>
-              <a href="map.html" class="btn btn-outline">View Details</a>
+              <a href="map.html?gunung=Gunung Manado Tua" class="btn btn-outline">View Details</a>
             </div>
           </div>
         </div>
@@ -278,7 +253,7 @@
   <section class="section">
     <div class="container">
       <div class="cta-box">
-        <h2 class="cta-title">Ready to Start Your Adventure?</h2>
+        <h2 class="cta-title">Siap Menjelajah Gunung?</h2>
         <p class="cta-description">Bergabunglah dengan komunitas pendaki kami dan temukan keindahan puncak-puncak di Sulawesi Utara.</p>
         <a href="map.html" class="btn btn-primary btn-lg">Explore Now</a>
       </div>
@@ -303,18 +278,7 @@
           <h4 class="footer-title">Quick Links</h4>
           <ul class="footer-links">
             <li><a href="map.html">Mountains</a></li>
-            <li><a href="tips.html">Features</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#">About Us</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-section">
-          <h4 class="footer-title">Resources</h4>
-          <ul class="footer-links">
             <li><a href="tips.html">Panduan Keselamatan</a></li>
-            <li><a href="https://www.bmkg.go.id/cuaca/prakiraan-cuaca/71.73">Cuaca</a></li>
-            <li><a href="https://api.whatsapp.com/send/?phone=6289697885901&text&type=phone_number&app_absent=0">Kontak Darurat</a></li>
           </ul>
         </div>
         
@@ -343,105 +307,7 @@
     </div>
   </footer>
 
-  <script>
-    // Dark Mode Toggle
-    const themeToggle = document.getElementById('themeToggle');
-    const body = document.body;
-    const themeIcon = themeToggle.querySelector('.material-symbols-outlined');
-    
-    // Check for saved theme preference
-    const currentTheme = window.localStorage.getItem('theme') || 'light';
-    if (currentTheme === 'dark') {
-      body.classList.add('dark');
-      themeIcon.textContent = 'light_mode';
-    }
-    
-    themeToggle.addEventListener('click', () => {
-      body.classList.toggle('dark');
-      
-      if (body.classList.contains('dark')) {
-        themeIcon.textContent = 'light_mode';
-        window.localStorage.setItem('theme', 'dark');
-      } else {
-        themeIcon.textContent = 'dark_mode';
-        window.localStorage.setItem('theme', 'light');
-      }
-    });
-
-    // Mobile Menu Toggle
-    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-    const navMenu = document.getElementById('navMenu');
-    
-    mobileMenuBtn.addEventListener('click', () => {
-      navMenu.classList.toggle('active');
-      const icon = mobileMenuBtn.querySelector('.material-symbols-outlined');
-      icon.textContent = navMenu.classList.contains('active') ? 'close' : 'menu';
-    });
-
-    // View All Mountains Toggle
-    const viewAllBtn = document.getElementById('viewAllBtn');
-    const hiddenMountains = document.getElementById('hiddenMountains');
-    let isExpanded = false;
-
-    viewAllBtn.addEventListener('click', () => {
-      isExpanded = !isExpanded;
-      
-      if (isExpanded) {
-        hiddenMountains.classList.add('show');
-        viewAllBtn.textContent = 'Show Less';
-        
-        // Smooth scroll to show new mountains
-        setTimeout(() => {
-          hiddenMountains.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-        }, 100);
-      } else {
-        hiddenMountains.classList.remove('show');
-        viewAllBtn.textContent = 'View All Mountains';
-        
-        // Scroll back to top of mountains section
-        document.getElementById('mountains').scrollIntoView({ behavior: 'smooth' });
-      }
-    });
-
-    // Smooth Scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        const href = this.getAttribute('href');
-        if (href !== '#') {
-          e.preventDefault();
-          const target = document.querySelector(href);
-          if (target) {
-            target.scrollIntoView({
-              behavior: 'smooth',
-              block: 'start'
-            });
-            // Close mobile menu if open
-            navMenu.classList.remove('active');
-            mobileMenuBtn.querySelector('.material-symbols-outlined').textContent = 'menu';
-          }
-        }
-      });
-    });
-
-    // Add scroll effect to navbar
-    let lastScroll = 0;
-    const navbar = document.querySelector('.navbar');
-    
-    window.addEventListener('scroll', () => {
-      const currentScroll = window.pageYOffset;
-      
-      if (currentScroll > 100) {
-        navbar.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1)';
-      } else {
-        navbar.style.boxShadow = 'none';
-      }
-      
-      lastScroll = currentScroll;
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 
 </html>
-
-
-
