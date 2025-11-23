@@ -143,7 +143,7 @@ if (document.getElementById('map')) {
                     if (ketinggian) baseContent += `<br>${ketinggian} mdpl`;
                     if (alamat) baseContent += `<br><i>${alamat}</i>`; 
 
-                    const apiKey = 'MASUKKAN_API_KEY_ANDA_DISINI';
+                    const apiKey = 'b4bece91fa005dc4592c5a42100c4bf9';
                     const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=${apiKey}&units=metric&lang=id`;
 
                     layer.bindPopup(baseContent + '<br><br>Memuat data cuaca...');
