@@ -93,19 +93,16 @@ if (document.getElementById('map')) {
     
     var map = L.map('map');
     
-    var esriSatellite = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-        attribution: 'Tiles © Esri'
+   var osmStreet = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}', {
+        maxZoom: 20,
+        subdomains: ['mt0', 'mt1', 'mt2', 'mt3'],
+        attribution: '&copy; Google Maps'
     });
-    var esriLabels = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer/tile/{z}/{y}/{x}', {
-        attribution: ''
-    });
-    var hybridMap = L.layerGroup([esriSatellite, esriLabels]);
     
-    hybridMap.addTo(map);
+    osmStreet.addTo(map);
     
     var baseMaps = {
-        "Satelit Hybrid": hybridMap,
-        "Satelit Polos": esriSatellite
+        "Peta": osmStreet
     };
     
     L.control.layers(baseMaps).addTo(map);
