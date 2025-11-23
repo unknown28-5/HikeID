@@ -154,7 +154,7 @@ if (document.getElementById('map')) {
                             const temp = Math.round(weatherData.main.temp);
                             const desc = weatherData.weather[0].description;
                             const iconCode = weatherData.weather[0].icon;
-                            const iconUrl = `http://openweathermap.org/img/wn/${iconCode}.png`;
+                            const iconUrl = `https://openweathermap.org/img/wn/${iconCode}.png`;
 
                             const weatherHtml = `
                                 <div style="margin-top: 10px; padding: 5px; background: #f0f8ff; border-radius: 5px; border: 1px solid #dbefff; display: flex; align-items: center;">
