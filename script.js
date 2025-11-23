@@ -134,6 +134,7 @@ if (document.getElementById('map')) {
                     const googleMapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}`;
                     
                     const namaGunung = feature.properties.name || "Nama tidak tersedia";
+                    const namaDisplay = namaGunung.replace(/-/g, ' ');
                     const ketinggian = feature.properties.ketinggian;
                     const fotoUrl = feature.properties.foto;
                     const deskripsi = feature.properties.deskripsi;
